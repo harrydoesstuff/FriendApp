@@ -1,0 +1,56 @@
+<p style="color: green"></p>
+
+<% if user_signed_in? %>
+
+  <table class="table table-hover table-striped table-bordered">
+    <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Twitter</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @friends.each do |friend| %>
+        <% if friend.user == current_user%>
+          <tr>
+            <td><%= link_to friend.first_name + ' ' + friend.last_name, friend%></td>
+            <td><%= friend.email %></td>
+            <td><%= friend.phone %></td>
+            <td><%= friend.twitter %></td>
+            <td><%= button_to "Delete", friend, method: :delete, form: {
+                data: {turbo_confirm: 'Are you sure you want to delete this friend?' }
+                }, 
+                class:"btn btn-sm btn-outline-danger" %></td>
+          </tr>
+        <% end %>
+      <% end %>
+    
+  </tbody>
+  </table>
+
+  <%= link_to "New friend", new_friend_path, class: "btn btn-dark" %>
+<% else %>
+
+  
+  
+
+<% end %>
+
+<div class="card">
+  <div class="card-header">
+    <h1>Hey Sophie!</h1>
+  </div>
+  <div class="card-body">
+      <p>This is a little app I made that can store friends.</p>
+      <p>Each user has their own list of friends that you can add, edit and remove.</p>
+      <p>Click on Sign Up to start making your own list.</p>
+      <br/>
+      <p>You can also login to my account by clicking on Sign In and entering the details: </p>
+      <p>Email: harryawsmith@gmail.com</p>
+      <p>Password: Soadkiksass_5</p>
+  </div>
+</div>

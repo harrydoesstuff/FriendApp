@@ -1,0 +1,13 @@
+<p style="color: green"></p>
+
+<div class="col-md-7">
+        <div class="h-100 p-5 text-bg-light border rounded-3">
+          <h2><%= @friend.first_name%></h2>
+          <br/>
+          <p><%= @friend.email %> | <%=@friend.phone %> | <%=@friend.twitter%></p>
+          <br/>
+          <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-dark" %> 
+          <%= link_to "Back", friends_path, class:"btn btn-dark" %>
+
+        </div>
+</div>
