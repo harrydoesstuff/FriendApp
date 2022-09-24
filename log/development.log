@@ -13746,3 +13746,48 @@ Processing by FriendsController#index as HTML
 Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 3489)
 
 
+Started GET "/posts/new" for ::1 at 2022-09-24 13:34:51 +1000
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/posts/new"):
+  
+Started GET "/" for ::1 at 2022-09-24 13:34:53 +1000
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 667)
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 630)
+  Rendered layout layouts/application.html.erb (Duration: 40.1ms | Allocations: 36600)
+Completed 200 OK in 49ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 40062)
+
+
+Started GET "/" for ::1 at 2022-09-24 13:35:41 +1000
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 697)
+  Rendered home/_header.html.erb (Duration: 1.0ms | Allocations: 564)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 4077)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 4980)
+
+
+Started GET "/" for ::1 at 2022-09-24 13:35:46 +1000
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 228)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2672)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 2976)
+
+
+Started GET "/" for ::1 at 2022-09-24 13:35:47 +1000
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 225)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 190)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 2668)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 2939)
+
+

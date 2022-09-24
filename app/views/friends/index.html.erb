@@ -1,7 +1,5 @@
 <p style="color: green"></p>
-
 <% if user_signed_in? %>
-
   <table class="table table-hover table-striped table-bordered">
     <thead class="table-dark">
       <tr>
@@ -12,7 +10,6 @@
         <th></th>
       </tr>
     </thead>
-
     <tbody>
       <% @friends.each do |friend| %>
         <% if friend.user == current_user%>
@@ -28,29 +25,19 @@
           </tr>
         <% end %>
       <% end %>
-    
-  </tbody>
+    </tbody>
   </table>
-
   <%= link_to "New friend", new_friend_path, class: "btn btn-dark" %>
 <% else %>
-
-
-<div class="card">
-  <div class="card-header">
-    <h1>Hey Sophie!</h1>
-  </div>
-  <div class="card-body">
+  <div class="card">
+    <div class="card-header">
+      <h1>Hello there</h1>
+    </div>
+    <div class="card-body">
       <p>This is a little app I made that can store friends.</p>
       <p>Each user has their own list of friends that you can add, edit and remove.</p>
       <p>Click on Sign Up to start making your own list.</p>
       <br/>
-      <p>You can also login to my account by clicking on Sign In and entering the details: </p>
-      <p>Email: harryawsmith@gmail.com</p>
-      <p>Password: Soadkiksass_5</p>
+    </div>
   </div>
-</div>
-  
-
 <% end %>
-
